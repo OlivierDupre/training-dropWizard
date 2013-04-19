@@ -1,13 +1,19 @@
 package fr.training.dropwizard.model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  *
  * @author shuttle
  */
+@XmlRootElement
 public class Car {
 
     String id;
-    int nbPassenger, maxSpeed;
+    int nbPassenger;
+    int maxSpeed;
     Driver driver;
 
     public Car() {

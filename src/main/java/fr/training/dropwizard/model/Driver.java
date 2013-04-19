@@ -1,8 +1,12 @@
 package fr.training.dropwizard.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  * @author shuttle
  */
+@XmlRootElement
 public class Driver {
 
     String firstName, lastName;

@@ -1,9 +1,12 @@
 package fr.training.dropwizard.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author shuttle
  */
+@XmlRootElement
 public class Truck {
 
     String id;
