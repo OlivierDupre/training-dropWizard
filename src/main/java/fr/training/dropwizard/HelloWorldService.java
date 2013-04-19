@@ -20,5 +20,6 @@ public void run(HelloWorldConfiguration configuration,
     final String template = configuration.getTemplate();
     final String defaultName = configuration.getDefaultName();
     environment.addResource(new HelloWorldResource(template, defaultName));
+    environment.addResource(new CarResource());
 }
 }
