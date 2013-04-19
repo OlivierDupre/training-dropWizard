@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * @author shuttle
  */
-@Produces(MediaType.APPLICATION_JSON)
+//@Produces(MediaType.APPLICATION_JSON)
 public class DriverResource {
 
     String vehicleId;

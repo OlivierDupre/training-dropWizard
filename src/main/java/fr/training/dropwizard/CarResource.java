@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
  * @author shuttle
  */
 @Path("/cars") // Par principe/convention, on met au pluriel
-@Produces(MediaType.APPLICATION_JSON) // Si on ne met rien, le serveur s'adapte en fonction de ce qui est présent dans le requête HTTP
+//@Produces(MediaType.APPLICATION_JSON) // Si on ne met rien, le serveur s'adapte en fonction de ce qui est présent dans le requête HTTP
 public class CarResource {
 
     @GET
