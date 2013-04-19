@@ -60,4 +60,9 @@ public class Truck {
     public void setDriver(Driver driver) {
         this.driver = driver;
     }
+
+    @Override
+    public String toString() {
+        return "Truck{" + "id=" + id + ", nbPassenger=" + nbPassenger + ", maxSpeed=" + maxSpeed + '}';
+    }
 }

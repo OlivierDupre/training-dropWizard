@@ -3,13 +3,16 @@ package fr.training.dropwizard;
 import fr.training.dropwizard.model.Car;
 import fr.training.dropwizard.model.Driver;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
 
 /**
  * @author shuttle
@@ -44,7 +47,7 @@ public class CarResource {
     }
 
     @Path("{id}/drivers")
-    public DriverResource manageDrivers(@PathParam("id") String carId){
+    public DriverResource manageDrivers(@PathParam("id") String carId) {
         return new DriverResource(carId);
     }
 }
