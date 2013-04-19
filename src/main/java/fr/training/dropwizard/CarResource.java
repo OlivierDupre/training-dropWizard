@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * @author shuttle
  */
-@Path("/cars") // Par picinpe/convention, on met au pluriel
+@Path("/cars") // Par principe/convention, on met au pluriel
 @Produces(MediaType.APPLICATION_JSON) // Si on ne met rien, le serveur s'adapte en fonction de ce qui est présent dans le requête HTTP
 public class CarResource {
 
@@ -22,9 +22,9 @@ public class CarResource {
     public List<Car> allCars() {
         List<Car> cars = new ArrayList<>();
 
-        cars.add(new Car("2DPG", 4, 150));
-        cars.add(new Car("Utopi-142", 2, 250));
-        cars.add(new Car("37-DPKG", 40, 110));
+        cars.add(new Car("C-21", 4, 150));
+        cars.add(new Car("C-23", 2, 250));
+        cars.add(new Car("C-24", 40, 110));
 
         return cars;
     }
@@ -41,5 +41,10 @@ public class CarResource {
         }
 
         return null;
+    }
+
+    @Path("{id}/drivers")
+    public DriverResource manageDrivers(@PathParam("id") String carId){
+        return new DriverResource(carId);
     }
 }
